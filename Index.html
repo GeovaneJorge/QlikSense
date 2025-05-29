@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Qlik Sense</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
+
+    .grafico-container {
+      width: 100%;
+      max-width: 1000px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8em;
+      }
+
+      iframe {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Gráfico Interativo - Qlik Sense Geovane Sistemas</h1>
+
+  <div class="grafico-container">
+    <!-- INSIRA AQUI SUA URL DO QLIK -->
+    <iframe 
+      id="graficoQlik"
+      src="https://SEU-SERVIDOR-QLIK/single/?appid=ID_DO_APP&obj=ID_DO_GRAFICO&opt=ctxmenu"
+      allowfullscreen
+    ></iframe>
+    <iframe src="https://seu-qlik-sense-server/app/your-app-id/sheet/your-sheet-id" width="800" height="600"></iframe>
+
+  </div>
+
+  <footer>
+    © Geovane Sistemas 2025.Todos os direitos reservados.
+  </footer>
+
+  <script>
+    // Exemplo de uso futuro com JS se quiser trocar o gráfico dinamicamente
+    // document.getElementById('graficoQlik').src = 'URL_ALTERNATIVA';
+  </script>
+
+</body>
+</html>
